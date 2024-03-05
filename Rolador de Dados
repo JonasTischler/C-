@@ -1,0 +1,28 @@
+#include <cstdlib>
+#include <ctime>
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    setlocale(LC_ALL, "portuguese");
+    srand((unsigned)time(0));
+    int randomNumber;
+    char Resposta;
+
+    do
+    {
+        for (int index = 0; index < 3; index++)
+        {
+            randomNumber = (rand() % 6) + 1;
+            cout << randomNumber << endl;
+        }
+        std::cout << "\nDeseja Continuar? (Responda S para Sim e N para não:) ";
+        std::cin >> Resposta;
+    } while (Resposta == 'S' || Resposta == 's');
+
+    std::cout << "\nSaindo do programa..." << std::endl;
+	system("Pause");
+	return 0;
+}
